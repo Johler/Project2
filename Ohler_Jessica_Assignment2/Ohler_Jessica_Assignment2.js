@@ -4,15 +4,18 @@
 // Project 2
 // Time Travel Journey
 
-// 
-
 //Set variables
+
 var partnerName = "Jabba the Pug",
 	expeditionPartner = true,
 	friendCompanion = true,
-	aliensHealth = 100
+	aliensHealth = 100,
+	yearTravelingFrom = 2000
+	yearTravelingTo = 25
 ;
+
 //Prompt: Finding out if user would like to travel with a companion.
+
 myConfirmation = confirm("Would you like to time travel with an expedition partner today?");
 if (expeditionPartner === true) {
 	console.log("Let's decide who to pick!")
@@ -21,6 +24,7 @@ if (expeditionPartner === true) {
 }
 
 //Procedure: which companion to travel with.
+
 if (friendCompanion === true) {
 	var friendCompanion = true,
 		loverCompanion = false,
@@ -31,12 +35,23 @@ if (friendCompanion === true) {
 	console.log("We will travel with " + nameLover + ".")
 };
 
-/*Boolean function:After landing on another planet, an alien starts to attack us for invading their space!
-
+/*Boolean function:After landing on another planet in the year 25, an alien starts to 
+	attack us for invading their space!  Jabba is going to protect us and defeat the alien! 
+	It is a Boolean because the computer keeps checking until the statement 
+	aliensHealth > 0 is true.
 */
+
 while (aliensHealth > 0) {
 	console.log ("His health is still at " + aliensHealth + "." + "  He's still alive and coming for us!");
 	aliensHealth --;
 };
-	console.log("We defeated the alien!");
+	console.log("We've defeated the alien!");
 
+/* Number Function with For Loop: Decided that was enough excitement with time traveling 
+	and it was time to go home to the year 2000.  
+*/
+
+for (var yearTravelingTo = 25; yearTravelingTo < 2000; yearTravelingTo +=50) {
+	console.log("We are still traveling through " + yearTravelingTo + ".");
+};
+console.log("We made it home safely to " + yearTravelingFrom + "!");
