@@ -9,9 +9,7 @@
 var partnerName = "Jabba the Pug",
 	expeditionPartner = true,
 	friendCompanion = true,
-	aliensHealth = 100,
-	yearTravelingFrom = 2000
-	yearTravelingTo = 25
+	aliensHealth = 100
 ;
 
 //Prompt: Finding out if user would like to travel with a companion.
@@ -50,8 +48,25 @@ while (aliensHealth > 0) {
 /* Number Function with For Loop: Decided that was enough excitement with time traveling 
 	and it was time to go home to the year 2000.  
 */
-
-for (var yearTravelingTo = 25; yearTravelingTo < 2000; yearTravelingTo +=50) {
+for (var yearTravelingTo = 25; yearTravelingTo < 2000; yearTravelingTo +=50){
 	console.log("We are still traveling through " + yearTravelingTo + ".");
+	yearTravelingFrom = 2000
+	
 };
 console.log("We made it home safely to " + yearTravelingFrom + "!");
+
+//String function with return string
+var timeTravelAgain = function (offerYear) {
+	var offerYear,
+		notGoing = "No thank you, that era was not for me.",
+		wouldLoveTo = "Are you ready now?"
+		;
+		if (offerYear > 25) {
+			console.log(wouldLoveTo);
+			offerYear = 15;
+		} else {
+		notGoing = "No thank you, that era was not for me.";
+		}
+};
+
+		
