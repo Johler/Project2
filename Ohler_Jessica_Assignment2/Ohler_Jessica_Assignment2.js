@@ -38,12 +38,17 @@ if (friendCompanion === true) {
 	It is a Boolean because the computer keeps checking until the statement 
 	aliensHealth > 0 is true.
 */
+var checkHealth = function(aliensHealth)
+{
+	while (aliensHealth > 0) {
+		console.log ("His health is still at " + aliensHealth + "." + "  He's still alive and coming for us!");
+		aliensHealth --;
+		return false;
+	}	console.log("We've defeated the alien!");
+		return true;
+}
 
-while (aliensHealth > 0) {
-	console.log ("His health is still at " + aliensHealth + "." + "  He's still alive and coming for us!");
-	aliensHealth --;
-};
-	console.log("We've defeated the alien!");
+var whileReturn = checkHealth();
 
 /* Number Function with For Loop: Decided that was enough excitement with time traveling 
 	and it was time to go home to the year 2000.  
@@ -56,17 +61,18 @@ for (var yearTravelingTo = 25; yearTravelingTo < 2000; yearTravelingTo +=50){
 console.log("We made it home safely to " + yearTravelingFrom + "!");
 
 //String function with return string
-var timeTravelAgain = function (offerYear) {
-	var offerYear,
-		notGoing = "No thank you, that era was not for me.",
-		wouldLoveTo = "Are you ready now?"
-		;
+var timeTravelAgain = function(offerYear) {
+		var notGoing = "No thank you, that era was not for me.",
+		wouldLoveTo = "Are you ready now?";
 		if (offerYear > 25) {
 			console.log(wouldLoveTo);
-			offerYear = 15;
+			return timeTravelAgain = wouldLoveTo;
 		} else {
-		notGoing = "No thank you, that era was not for me.";
+		console.log(notGoing);
+		return timeTravelAgain = notGoing;
 		}
 };
+var timeReturn = timeTravelAgain(15);
+console.log(timeReturn);
 
 		
